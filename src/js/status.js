@@ -1,9 +1,11 @@
 export default function getStatusPlayer(user) {
+  let status = '';
   if (user.health < 15) {
-    return 'critical';
+    status = 'critical';
   } if (user.health > 50) {
-    return 'healthy';
+    status = 'healthy';
   } if (user.health <= 50 && user.health >= 15) {
-    return 'wounded';
+    status = 'wounded';
   }
+  return status;
 }
